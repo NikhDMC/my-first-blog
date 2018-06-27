@@ -4,14 +4,15 @@
 	</head>
 	<body>
 		<div>
-    	<h1><a href="/">Test Blog</a></h1>
-    	</div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-    	<div>
-    		<p> Nothing </p>
-    		<h2><a href="">My facebook</a></h2>
-    		<p>LOL get to my facebook</p>
-
-    	</div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 	</body>
 </html>
